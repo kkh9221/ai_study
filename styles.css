@@ -1,4 +1,4 @@
- /* 기본 스타일 리셋 */
+/* 기본 스타일 리셋 */
 * {
     margin: 0;
     padding: 0;
@@ -483,49 +483,413 @@ header h1 {
     background: #cbd5e0;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
+/* 반응형 디자인 - 개선된 버전 */
+@media (max-width: 1024px) {
     .container {
-        padding: 10px;
+        max-width: 95%;
+        padding: 15px;
     }
     
     header {
-        padding: 20px;
+        padding: 25px;
+        margin-bottom: 25px;
     }
     
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+    
+    .view-container {
+        padding: 25px;
+    }
+    
+    .input-group {
+        gap: 12px;
+    }
+    
+    .input-group input[type="text"],
+    .input-group input[type="date"] {
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+    
+    #addTodoBtn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+    
+    .calendar-day {
+        min-height: 90px;
+        padding: 8px;
+    }
+    
+    .calendar-todos {
+        font-size: 10px;
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    header {
+        padding: 20px 15px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .view-toggle {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .toggle-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    
+    .view-container {
+        padding: 20px 15px;
+        border-radius: 15px;
     }
     
     .input-group {
         flex-direction: column;
+        gap: 10px;
     }
     
-    .input-group input[type="text"] {
+    .input-group input[type="text"],
+    .input-group input[type="date"] {
         min-width: auto;
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+    
+    #addTodoBtn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        border-radius: 15px;
+    }
+    
+    .todo-list-section h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .todo-item {
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 12px;
     }
     
     .todo-content {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
     }
     
     .todo-actions {
         width: 100%;
-        justify-content: flex-end;
+        justify-content: space-between;
+        gap: 8px;
+    }
+    
+    .todo-actions button {
+        flex: 1;
+        padding: 10px 8px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .calendar-nav-btn {
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+    
+    #currentMonth {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .calendar-weekdays div {
+        padding: 10px 5px;
+        font-size: 12px;
     }
     
     .calendar-day {
-        min-height: 80px;
+        min-height: 70px;
         padding: 5px;
+        border-radius: 0;
+    }
+    
+    .calendar-day-number {
+        font-size: 12px;
+        margin-bottom: 3px;
     }
     
     .calendar-todos {
-        font-size: 10px;
+        font-size: 9px;
+        max-height: 40px;
+        line-height: 1.2;
+    }
+    
+    .calendar-todo-item {
+        padding: 2px 4px;
+        margin: 1px 0;
+        border-radius: 4px;
+        font-size: 8px;
     }
     
     .modal-content {
-        margin: 10% auto;
-        padding: 20px;
+        margin: 5% auto;
+        padding: 20px 15px;
+        width: 95%;
+        border-radius: 15px;
+    }
+    
+    .close {
+        right: 15px;
+        top: 15px;
+        font-size: 24px;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .modal-content input {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .modal-buttons button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+    
+    header {
+        padding: 15px 10px;
+        border-radius: 12px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .view-container {
+        padding: 15px 10px;
+        border-radius: 12px;
+    }
+    
+    .input-group input[type="text"],
+    .input-group input[type="date"] {
+        padding: 10px 12px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+    
+    #addTodoBtn {
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 12px;
+    }
+    
+    .todo-item {
+        padding: 12px;
+        border-radius: 10px;
+    }
+    
+    .todo-text {
+        font-size: 14px;
+    }
+    
+    .todo-date {
+        font-size: 12px;
+    }
+    
+    .todo-actions button {
+        padding: 8px 6px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+    
+    .calendar-weekdays div {
+        padding: 8px 3px;
+        font-size: 11px;
+    }
+    
+    .calendar-day {
+        min-height: 60px;
+        padding: 3px;
+    }
+    
+    .calendar-day-number {
+        font-size: 11px;
+    }
+    
+    .calendar-todos {
+        font-size: 8px;
+        max-height: 35px;
+    }
+    
+    .calendar-todo-item {
+        padding: 1px 3px;
+        font-size: 7px;
+        border-radius: 3px;
+    }
+    
+    .modal-content {
+        margin: 2% auto;
+        padding: 15px 10px;
+        border-radius: 12px;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .modal-content input {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .modal-buttons button {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* 터치 디바이스 최적화 */
+@media (hover: none) and (pointer: coarse) {
+    .toggle-btn:hover,
+    .filter-btn:hover,
+    .todo-actions button:hover,
+    .calendar-nav-btn:hover,
+    .calendar-day:hover {
+        transform: none;
+    }
+    
+    .todo-item:hover {
+        transform: none;
+    }
+    
+    .input-group input[type="text"]:focus,
+    .input-group input[type="date"]:focus {
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    }
+    
+    .modal-content input:focus {
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        color: #e2e8f0;
+    }
+    
+    header,
+    .view-container {
+        background: rgba(45, 55, 72, 0.9);
+        color: #e2e8f0;
+    }
+    
+    header h1 {
+        color: #90cdf4;
+    }
+    
+    .todo-item {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+    
+    .todo-text {
+        color: #f7fafc;
+    }
+    
+    .input-group input[type="text"],
+    .input-group input[type="date"] {
+        background: #4a5568;
+        border-color: #718096;
+        color: #e2e8f0;
+    }
+    
+    .calendar-grid {
+        background: #2d3748;
+    }
+    
+    .calendar-day {
+        background: #4a5568;
+        border-color: #718096;
+        color: #e2e8f0;
+    }
+    
+    .calendar-day.other-month {
+        background: #2d3748;
+        color: #a0aec0;
+    }
+    
+    .modal-content {
+        background: #2d3748;
+        color: #e2e8f0;
     }
 }
