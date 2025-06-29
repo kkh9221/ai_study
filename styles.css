@@ -637,8 +637,11 @@ header h1 {
     }
     
     #currentMonth {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         text-align: center;
+        word-break: keep-all;
+        line-height: 1.2;
+        margin: 0 10px;
     }
     
     .calendar-weekdays div {
@@ -813,6 +816,97 @@ header h1 {
     .modal-buttons button {
         padding: 10px;
         font-size: 13px;
+    }
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .calendar-nav-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    #currentMonth {
+        font-size: 1.3rem;
+        text-align: center;
+        word-break: keep-all;
+        line-height: 1.2;
+        margin: 0 5px;
+    }
+    
+    .calendar-weekdays div {
+        padding: 8px 3px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 5px;
+    }
+    
+    header {
+        padding: 12px 8px;
+        border-radius: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .view-container {
+        padding: 12px 8px;
+        border-radius: 10px;
+    }
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .calendar-nav-btn {
+        padding: 5px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    
+    #currentMonth {
+        font-size: 1.1rem;
+        text-align: center;
+        word-break: keep-all;
+        line-height: 1.1;
+        margin: 0 3px;
+    }
+    
+    .calendar-weekdays div {
+        padding: 6px 2px;
+        font-size: 10px;
+    }
+    
+    .calendar-day {
+        min-height: 50px;
+        padding: 2px;
+    }
+    
+    .calendar-day-number {
+        font-size: 10px;
+    }
+    
+    .calendar-todos {
+        font-size: 7px;
+        max-height: 30px;
+    }
+    
+    .calendar-todo-item {
+        padding: 1px 2px;
+        font-size: 6px;
+        border-radius: 2px;
     }
 }
 
